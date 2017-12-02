@@ -1,8 +1,8 @@
 # rotary-monitor
 
-Credit: [http://darcy.rsgc.on.ca]
+Credit: http://darcy.rsgc.on.ca
 
-rotary switch in the manner described. If there are an EVEN number of set bits in the BCD value read, your bicolor LED should show red, otherwise it will show green. You will use the ATtiny85 for this challenge. To simplify the matter somewhat you are only required to monitor the BCD values from 0 to 7 inclusive .The BCD value is to be read on pins 0-2 and your bicolor LED will span pins 3 and 4, with the longer lead in pin 3.
+For your first assembly language challenge you are to CONTINUOUSLY monitor a BCD rotary switch in the manner described. If there are an EVEN number of set bits in the BCD value read, your bicolor LED should show red, otherwise it will show green. You will use the ATtiny85 for this challenge. To simplify the matter somewhat you are only required to monitor the BCD values from 0 to 7 inclusive .The BCD value is to be read on pins 0-2 and your bicolor LED will span pins 3 and 4, with the longer lead in pin 3.
 
 ## Task.
 

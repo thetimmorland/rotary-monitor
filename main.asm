@@ -1,8 +1,8 @@
 ;
 ; rotary-monitor.asm
 ;
-; Created: 2017-12-01 1:40:49 PM
-; Author : Tim
+; if the input of a rotary encoder is even set LED red
+; otherwise set LED green
 ;
 
 .INCLUDE "count-set-bits.inc"

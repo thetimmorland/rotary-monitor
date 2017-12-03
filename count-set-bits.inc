@@ -5,20 +5,18 @@
 ;
 
 ; COUNT_SET_BITS Rd, Rr
-; r16 <= Rd, Rr
 .MACRO COUNT_SET_BITS
 
-clr @0
-push @1 ; perserve @1
+setup:	clr @0
+		push @1 ; perserve contents of Rr
 
 loop:	sbrc @1, 0
 		inc @0
 
 		lsr @1 ; change bit to be masked
-		breq return
+		breq exit
 		rjmp loop
 
-return:
-		pop @1
+exit:	pop @1 ; restore Rr
 
 .ENDMACRO

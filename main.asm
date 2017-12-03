@@ -10,7 +10,7 @@
 .SET green = PB3
 .SET red = PB4
 
-setup:	ldi r16, 1 << green | 1 << red
+setup:	ldi r16, 1 << green | 1 << red ; enable output for LED pins
 		out DDRB, r16
 
 loop:	.DEF rotaryInput = r16
@@ -27,12 +27,12 @@ loop:	.DEF rotaryInput = r16
 		.UNDEF rotaryInput
 		.UNDEF setBits
 		
-isOdd:	ldi r16, 1 << green
+isOdd:	ldi r16, 1 << green ; set LED green
 		out PORTB, r16
 		
 		rjmp loop ; restart
 
-isEven:	ldi r16, 1 << red
+isEven:	ldi r16, 1 << red ; set LED red
 		out PORTB, r16
 
 		rjmp loop ; restart
